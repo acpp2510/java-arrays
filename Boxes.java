@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Boxes {
     public static void main(String[] args) {
 
@@ -14,9 +16,25 @@ public class Boxes {
         */
 
         //Crea un array con las cosas que contienen las cajas
+        String [] cajas ={"Libros", "Utensilios de cocina", "Artículos de baño", "Bolsos", "Zapatos", "Cosas de verano", "Cosas de invierno"};
 
         //Pregunta al usuario lo siguiente: Hola, soy tu asistente de la organización ¿Qué deseas buscar? (la respuesta deberá aparecer en la terminal en la misma línea)
 
-        //Crea un programa que te devuelva lo siguiente: <cosas> están en la caja <índice> en el caso de no existir que devuelva: <cosas> no las empacaste, oops! 
+        Scanner solicitud = new Scanner(System.in);
+        System.out.print("Hola, soy tu asistente de la organización ¿Qué deseas buscar?" + "\t");
+        String objBuscado = solicitud.nextLine();
+        solicitud.close();
+
+        //Crea un programa que te devuelva lo siguiente: <cosas> están en la caja <índice> en el caso de no existir que devuelva: <cosas> no las empacaste, oops!
+        int i;
+        for (i=0; i< cajas.length ;i++ ) {
+            if (cajas[i].equals(objBuscado)) {
+                System.out.println(objBuscado + " están en la caja: " + i);
+                break;
+            }
+        }
+        if (i == cajas.length) {
+            System.out.println("'" + objBuscado + "' no las empacaste, oops!");
+        }
     }
 }
