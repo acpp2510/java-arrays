@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Welcome {
     public static void main(String[] args) {
 
@@ -23,10 +21,10 @@ public class Welcome {
         }
 
         //Crea un array de tipo char que contenga las vocales en minúsculas y usa un bucle 'for-each' e imprime cada vocal en mayúsculas
-        char[] vocales ={'a','e','i','o','u'};
-        for (char vocal: vocales){
-            char vocalMayus =Character.toUpperCase(vocal);
-            System.out.println(vocalMayus);
+        char[] vowels ={'a','e','i','o','u'};
+        for (char vowel: vowels){
+            char vowelCap =Character.toUpperCase(vowel);
+            System.out.println(vowelCap);
         }
 
     }
